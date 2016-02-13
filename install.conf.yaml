@@ -2,6 +2,7 @@
 
 - link:
     ~/.dotfiles: ''
+    ~/.gitconfig: gitconfig
     ~/.tmux: tmux/
     ~/.tmux.conf: tmux.conf
     ~/.vim: vim/

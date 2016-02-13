@@ -1,0 +1,8 @@
+[user]
+	email = rubenvereecken@gmail.com
+	name = Ruben Vereecken
+[push]
+	default = matching
+  followTags = true
+[fetch]
+	prune = true
