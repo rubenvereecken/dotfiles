@@ -1,5 +1,5 @@
-" => General
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Sets how many lines of history VIM has to remember
 set history=500
@@ -54,6 +54,11 @@ nnoremap I i_<Esc>r
 nmap <leader>w :w!<CR>
 nmap <leader>q :q<CR>
 nmap <leader>wq :wq<CR>
+
+"""""""""""""""""""""""""""""""
+" => Shortcuts for programming
+" """""""""""""""""""""""""""""
+" inoremap {<CR> {<CR>}<C-o>O
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -158,6 +163,7 @@ else
 endif
 
 " Just a nice font I found, used in the gui only
+" TODO automatically install this using dotfiles organizer
 if has("gui_running")
   if has("gui_gtk2")
     set guifont=Source\ Code\ Pro\ for\ Powerline\ Medium\ 10
@@ -274,10 +280,6 @@ endfunction
 
 nnoremap <silent> <Plug>LocationPrevious    :<C-u>exe 'call <SID>LocationPrevious()'<CR>
 nnoremap <silent> <Plug>LocationNext        :<C-u>exe 'call <SID>LocationNext()'<CR>
-
-" Shortcuts to navigate locations
-nmap <silent> .,    <Plug>LocationPrevious
-nmap <silent> ..    <Plug>LocationNext
 
 " Vim diff shortcuts and whatnot
 
