@@ -1,8 +1,42 @@
+[alias]
+	st = status -sb
+	br = branch -vv
+	ci = commit -v
+	di = diff
+	dh = diff HEAD
+	co = checkout
+	ff = merge --ff-only
+	noff = merge --no-ff
+	fa = fetch --all --tags --prune
+	targz = ! "targz() { git archive --format tar.gz --prefix=\"${PWD##*/}/\" HEAD -o ${1}; }; targz"
+	zip = ! "zip() { git archive --format zip --prefix=\"${PWD##*/}/\" HEAD -o ${1}; }; zip"
+
 [user]
 	email = rubenvereecken@gmail.com
 	name = Ruben Vereecken
+
+[merge]
+	defaultToUpstream = true
+	tool = vimdiff
+
 [push]
 	default = matching
-  followTags = true
+	followTags = true
+
+[pretty]
+	line = "%C(auto)%h%d %s %C(yellow)by %C(blue)%an %C(green)%ar"
+	compact = "%C(auto)%h %s %C(green)%ar%n %C(auto)%d%n"
+	detail = "%C(auto)%h %s%n  %C(yellow)by %C(blue)%an %C(magenta)<%ae> [%G?] %C(green)%ar%n %C(auto)%d%n"
+
 [fetch]
 	prune = true
+
+[grep]
+	lineNumber = true
+
+[core]
+	excludesfile = ~/.gitignore_global
+
+# Allow local customizations in the .gitconfig_local file
+[include]
+	path = ~/.gitconfig_local
