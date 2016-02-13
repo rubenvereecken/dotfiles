@@ -9,3 +9,4 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - [echo "Install all tmux plugins by hitting `prefix + I` within tmux"]
