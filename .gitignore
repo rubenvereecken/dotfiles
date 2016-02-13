@@ -1,0 +1,3 @@
+# Ignore tmux plugins as tpm will download these itself
+tmux/plugins/*
+!tmux/plugins/tpm
