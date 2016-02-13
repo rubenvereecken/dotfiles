@@ -146,9 +146,9 @@ set number
 
 " Enable syntax highlighting
 syntax enable
-set t_Co=16
 
 if has("gui_running")
+  set t_Co=16
   set background=dark
   colorscheme solarized
   set guioptions-=m  "remove menu bar
@@ -196,8 +196,8 @@ set expandtab
 set smarttab
 
 " 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 set shiftround " Indent to nearest shiftwidth multiple
 
 set listchars=tab:→\ ,trail:·
