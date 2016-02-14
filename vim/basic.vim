@@ -59,6 +59,8 @@ nmap <leader>wq :wq<CR>
 " => Shortcuts for programming
 " """""""""""""""""""""""""""""
 " inoremap {<CR> {<CR>}<C-o>O
+" Shortcut for search-replace of the whole current word
+:nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
