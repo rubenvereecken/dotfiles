@@ -2,6 +2,7 @@
 	st = status -sb
 	br = branch -vv
 	ci = commit -v
+	cm = commit -am
 	di = diff
 	dh = diff HEAD~
 	co = checkout
