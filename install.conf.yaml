@@ -13,4 +13,5 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - [mkdir -p ~/.z]
   - [echo "Install all tmux plugins by hitting `prefix + I` within tmux"]
