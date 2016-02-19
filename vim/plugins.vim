@@ -67,3 +67,15 @@ autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
 " Emmet for HTML and CSS
 let g:emmet_html5=1
 let g:user_emmet_leader_key='<C-E>'
+
+" CoffeeScript
+" autocmd QuickFixCmdPost * nested botright cwindow
+" autocmd BufWritePost *.coffee silent make
+autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent
+autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+
+" UltiSnips
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
