@@ -12,5 +12,5 @@ export CPATH="$CUDA_ROOT/include:$CPATH"
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='gvim'
+  export EDITOR='vim'
 fi
