@@ -13,6 +13,10 @@ export CPATH="$CUDA_ROOT/include:$CPATH"
 # This is the default install locatiion. Install `ca-certificates`
 export CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
 
+# For the cheat tool
+export CHEATPATH="$HOME/.cheats"
+export CHEATCOLORS=true
+
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'

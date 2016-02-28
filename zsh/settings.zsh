@@ -11,4 +11,7 @@ HIST_STAMPS="dd/mm/yyyy"
 # TODO add vimmode once I understand
 plugins=(git tmux z)
 
+# Autocompletion files
+fpath=($HOME/.zsh/autocompletion $fpath)
+
 source $ZSH/oh-my-zsh.sh
