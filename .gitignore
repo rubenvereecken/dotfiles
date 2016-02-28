@@ -3,3 +3,4 @@ tmux/plugins/*
 !tmux/plugins/tpm
 
 *.pyc
+node_modules

@@ -3,6 +3,7 @@
 - link:
     ~/.dotfiles: ''
     ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
     ~/.tmux: tmux/
     ~/.tmux.conf: tmux.conf
     ~/.vim: vim/
