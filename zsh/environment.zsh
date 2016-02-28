@@ -8,6 +8,9 @@ export LD_LIBRARY_PATH="$CUDA_ROOT/lib64:$LD_LIBRARY_PATH"
 export LIBRARY_PATH="$CUDA_ROOT/lib64:$LIBRARY_PATH"
 export CPATH="$CUDA_ROOT/include:$CPATH"
 
+# This is the default install locatiion. Install `ca-certificates`
+export CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
+
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'

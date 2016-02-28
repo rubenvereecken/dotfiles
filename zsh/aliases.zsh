@@ -5,6 +5,8 @@ alias apts="sudo apt-cache search"
 alias apti="sudo apt-get install -y"
 alias aptin="sudo apt-get install"
 alias apt-get="sudo apt-get"
+alias vimf='vim $(fzf)'
+alias gvimf='gvim $(fzf)'
 
 # Generate examples from a man page
 eg(){
