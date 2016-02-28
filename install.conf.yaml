@@ -18,3 +18,4 @@
   # - [mkdir -p ~/.z]
   - [echo "Install all tmux plugins by hitting `prefix + I` within tmux"]
   - [npm install]
+  - [pip install -r requirements.txt --upgrade]

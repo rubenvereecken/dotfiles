@@ -10,6 +10,6 @@
   "license": "MIT",
   "homepage": "https://github.com/rubenvereecken/dotfiles#readme",
   "dependencies": {
-    "tldr": "^1.6.0"
+    "tldr": "*"
   }
 }

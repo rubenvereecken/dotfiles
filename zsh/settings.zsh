@@ -8,6 +8,7 @@ ZSH_THEME="robbyrussell"
 HIST_STAMPS="dd/mm/yyyy"
 
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(git tmux vi-mode z)
+# TODO add vimmode once I understand
+plugins=(git tmux z)
 
 source $ZSH/oh-my-zsh.sh
