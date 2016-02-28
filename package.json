@@ -1,0 +1,15 @@
+{
+  "name": "dotfiles",
+  "version": "1.0.0",
+  "description": "Tracks the npm scripts that I like to keep with me.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rubenvereecken/dotfiles.git"
+  },
+  "author": "Ruben Vereecken",
+  "license": "MIT",
+  "homepage": "https://github.com/rubenvereecken/dotfiles#readme",
+  "dependencies": {
+    "tldr": "^1.6.0"
+  }
+}
