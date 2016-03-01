@@ -13,6 +13,7 @@
     ~/.zshrc: zshrc
     ~/.fzf: fzf/
     # ~/.cheat: cheat/
+    ~/.ssh/precious_rsa.pub: ssh/precious_rsa.pub
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
