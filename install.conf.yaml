@@ -12,7 +12,7 @@
     ~/.zsh: zsh/
     ~/.zshrc: zshrc
     ~/.fzf: fzf/
-    # ~/.cheat: cheat/
+    ~/.cheat: cheat/
     ~/.ssh/precious_rsa.pub: ssh/precious_rsa.pub
 
 - shell:

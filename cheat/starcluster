@@ -1,0 +1,18 @@
+# Creating a single volume using a spot instance
+starcluster cv --name=my-name 20 us-east-1c --bid=0.10 -I t2.nano
+starcluster terminate volumecreator
+
+# Removing volumes in bulk
+starcluster lv | grep 'vol-.*' -o > vols.txt
+
+for vol in `cat vols.txt`; do
+  starcluster rv -c $vol
+done;
+
+# Switching regions
+# AMIs need to be ported
+# Create ney keypair. Possible to import older ones:
+starcluster ck -i ~/.ssh/rubenskey.rsa rubenskey
+
+# Move volume between availability zones using -z
+starcluster resizevolume -z us-east-1d vol-9999999 20
