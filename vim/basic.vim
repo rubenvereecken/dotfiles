@@ -56,11 +56,19 @@ nmap <leader>q :q<CR>
 nmap <leader>wq :wq<CR>
 
 """""""""""""""""""""""""""""""
+" => Language specific
+"""""""""""""""""""""""""""""""
+" TODO remove this once you'll never touch Tiny ever again
+au BufRead,BufNewFile *.tiny setfiletype c
+" For autocompletion (compdef) files, which do not have an extension
+au BufRead,BufNewFile _* zsh
+
+"""""""""""""""""""""""""""""""
 " => Shortcuts for programming
 " """""""""""""""""""""""""""""
 " inoremap {<CR> {<CR>}<C-o>O
 " Shortcut for search-replace of the whole current word
-:nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -256,6 +264,9 @@ nmap <leader>tq :bp <BAR> bd #<CR>
 
 " Show all open buffers and their status
 nmap <leader>tl :ls<CR>
+
+" Vertical split
+nmap <leader>v :vs<CR>
 
 " Switch CWD to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
