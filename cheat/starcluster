@@ -16,3 +16,11 @@ starcluster ck -i ~/.ssh/rubenskey.rsa rubenskey
 
 # Move volume between availability zones using -z
 starcluster resizevolume -z us-east-1d vol-9999999 20
+
+# Starcluster cluster
+- Start a cluster with the needed settings
+- Log on
+# -V is for passing on env
+- qsub -V script.sh parameters
+# Start a loadbalancer from somewhere remote
+- starcluster bal -m 2 targetcluster

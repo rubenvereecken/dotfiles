@@ -3,9 +3,9 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 export PATH="$HOME/.dotfiles/node_modules/.bin:$PATH"
 
 # These are for working with CUDA
-export PATH="/usr/local/cuda/bin:$PATH"
-export CUDA_ROOT="/usr/local/cuda"
-export CUDA_HOME="/usr/local/cuda"
+export CUDA_ROOT="/usr/local/cuda-7.5"
+export CUDA_HOME="$CUDA_ROOT"
+export PATH="$CUDA_ROOT/bin:$PATH"
 export LD_LIBRARY_PATH="$CUDA_ROOT/lib64:$LD_LIBRARY_PATH"
 export LIBRARY_PATH="$CUDA_ROOT/lib64:$LIBRARY_PATH"
 export CPATH="$CUDA_ROOT/include:$CPATH"

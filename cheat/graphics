@@ -1,0 +1,21 @@
+# Show currently used
+inxi -Gx
+lsmod | grep nvidia
+
+# Note that for my current Nvidia card which supports Optimus,
+# it's impossible to update driver through package manager
+# MUST use runfile method
+
+# Uninstall driver
+nvidia-uninstall
+# Otherwise, try a purge
+sudo apt-get purge 'nvidia*'
+
+# Update driver
+- Download runfile installer
+- Get into a shell: Ctrl Alt F1
+- Stop the window manager: sudo stop mdm
+- Purge current installation: apt-get purge 'nvidia*'
+- Run the installer
+- sudo start mdm
+

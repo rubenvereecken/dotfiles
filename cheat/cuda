@@ -1,0 +1,11 @@
+# Installation
+# The first method that involves getting a local deb repository
+# This runfile install the repository locally
+# Then, apt-get can be used as normal
+# Be wary: nvidia-settings > 352 is needed
+# ALSO: cuda brings its own nvidia driver. Yeah.
+
+# The second method is without the package manager:
+# Get the runfile installer
+# Make sure to uninstall previous nvidia drivers
+# so the cuda installer can install its own
