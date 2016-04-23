@@ -1,4 +1,6 @@
 *.pyc
+node_modules
+bower_components
 
 ### Linux ###
 *~

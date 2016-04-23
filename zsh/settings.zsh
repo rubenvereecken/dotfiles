@@ -14,4 +14,8 @@ plugins=(git tmux z)
 # Autocompletion files
 fpath=($HOME/.zsh/autocompletion $fpath)
 
+# NVM
+export NVM_DIR="$HOME/.dotfiles/node/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
 source $ZSH/oh-my-zsh.sh
