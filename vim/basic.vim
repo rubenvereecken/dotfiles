@@ -40,7 +40,7 @@ inoremap jj <Esc>
 " Switch to Normal and Save
 inoremap jw <Esc>:w<CR>
 " Switch to Normal, Save aaaand Quit
-inoremap jwq <Esc>:wq<CR>
+inoremap jq <Esc>:wq<CR>
 " Switch to Normal and Undo
 " inoremap ju <Esc>u<CR>
 
