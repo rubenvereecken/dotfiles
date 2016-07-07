@@ -22,5 +22,7 @@ starcluster resizevolume -z us-east-1d vol-9999999 20
 - Log on
 # -V is for passing on env
 - qsub -V script.sh parameters
+# -v <list> for passing a comma delimited list
+qsub -v BLUB=yes,BAR=no script.sh parameters
 # Start a loadbalancer from somewhere remote
 - starcluster bal -m 2 targetcluster

@@ -1,0 +1,20 @@
+Summary of the most commonly used qsub options:
+
+-N <job name> : assign the given <job name> to the job (displayed when listing the submitted/running jobs).
+-d <path> : start the job in the given <path>. Same result is achieved by doing a cd <path> in the script.
+-e <filename> : write the stderr (error messages) in the given <path>.
+-o <filename> : write the stdout (standard output) in the given <path>. You can use the %j in the file name to include the job ID and %N for the job name. Example: -o my_run_%j_%N.out
+-j oe : combine the stdout (standard output) and stderr (error messages) in the file specified with the -o option.
+-l <resources> : define the resources required to run the job. See below for more information on this option.
+-m <email options> : decide when to send an email: at job start, completion and/or error.
+-v <list> : pass the list of system variables, delimited by a comma, to the job.
+-V : pass all the system variables to the job.
+
+Resources:
+
+walltime=<time> : define the maximum walltime (total execution time) of the job. The time can be specified in seconds (single integer) or in the format hh:mm:ss. See the note below about this resource.
+mem=<memory size> : reserve <memory size> of RAM for the job. Use <integer><suffix> as memory requirement where <suffix> can be kb, mb or gb. Example: -l mem=32gb.
+nodes=<nb of nodes> or nodes=<nb of nodes>:ppn=<nb of cores per node> : this resource asks for <nb of nodes> on the cluster and optionally <nb of cores> on each node. Since each Hydra node is equipped with 2 CPUs, asking for instance nodes=3:ppn=12 will reserve 36 cores evenly distributed on 3 nodes.
+procs=<nb of processors> : ask for <nb of processors> on a single compute for the job. We recommand to use the nodes resource instead.
+depend=<job ID> : start the current job once the <job ID> is completed. Instead of using the job ID, you can use the job name (see the -N option).
+signal=<signal>@<# of seconds> : will ask Torque to send the signal <signal> to the running job <# of seconds> before it reaches the walltime limit. This option is useful only for programs that can do checkpointing.
