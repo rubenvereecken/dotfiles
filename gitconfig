@@ -21,7 +21,7 @@
 	tool = vimdiff
 
 [push]
-	default = matching
+	default = simple
 	followTags = true
 
 [pretty]

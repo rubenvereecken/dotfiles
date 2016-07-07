@@ -7,6 +7,7 @@ alias aptin="sudo apt-get install"
 alias apt-get="sudo apt-get"
 alias vimf='vim $(fzf)'
 alias gvimf='gvim $(fzf)'
+alias gvimr='gvim --remote'
 
 # Generate examples from a man page
 eg(){
