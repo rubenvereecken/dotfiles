@@ -50,9 +50,9 @@ nnoremap <Leader>nf :NERDTreeFind<CR>
 " autocmd VimEnter * wincmd p
 
 " Remap CamelCase motion
-map 'w <Plug>CamelCaseMotion_w
-map 'b <Plug>CamelCaseMotion_b
-map 'e <Plug>CamelCaseMotion_e
+" map 'w <Plug>CamelCaseMotion_w
+" map 'b <Plug>CamelCaseMotion_b
+" map 'e <Plug>CamelCaseMotion_e
 
 " Haskellmode
 " au BufEnter *.hs compiler ghc
@@ -76,6 +76,7 @@ autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 
 " UltiSnips
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:C_Ctrl_j = 'off'
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsJumpForwardTrigger="<c-f>"
+let g:UltiSnipsJumpBackwardTrigger="<c-b>"

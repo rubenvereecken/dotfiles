@@ -43,12 +43,10 @@ inoremap jw <Esc>:w<CR>
 inoremap jq <Esc>:wq<CR>
 " Switch to Normal and Undo
 " inoremap ju <Esc>u<CR>
+" Complement J, split line
+nnoremap K i<CR><Esc>
 
-" Enter newline below this line using Enter
-nnoremap <CR> o<Esc>
-
-" use capital I for a single character insert. It's rather crappy
-nnoremap I i_<Esc>r
+inoremap <leader>; <C-o>m`<C-o>A;<C-o>``
 
 " Fast saving
 nmap <leader>w :w!<CR>
@@ -61,7 +59,7 @@ nmap <leader>wq :wq<CR>
 " TODO remove this once you'll never touch Tiny ever again
 au BufRead,BufNewFile *.tiny setfiletype c
 " For autocompletion (compdef) files, which do not have an extension
-au BufRead,BufNewFile _* zsh
+" au BufRead,BufNewFile _* zsh
 
 """""""""""""""""""""""""""""""
 " => Shortcuts for programming
