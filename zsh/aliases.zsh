@@ -8,6 +8,7 @@ alias apt-get="sudo apt-get"
 alias vimf='vim $(fzf)'
 alias gvimf='gvim $(fzf)'
 alias gvimr='gvim --remote'
+alias mendeley='mendeleydesktop'
 
 # Generate examples from a man page
 eg(){

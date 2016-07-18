@@ -6,8 +6,8 @@ export PATH="$HOME/.dotfiles/node_modules/.bin:$PATH"
 export CUDA_ROOT="/usr/local/cuda-7.5"
 export CUDA_HOME="$CUDA_ROOT"
 export PATH="$CUDA_ROOT/bin:$PATH"
-export LD_LIBRARY_PATH="$CUDA_ROOT/lib64:$LD_LIBRARY_PATH"
-export LIBRARY_PATH="$CUDA_ROOT/lib64:$LIBRARY_PATH"
+export LD_LIBRARY_PATH="$CUDA_ROOT/lib64:$LD_LIBRARY_PATH:/usr/local/lib"
+export LIBRARY_PATH="$CUDA_ROOT/lib64:$LIBRARY_PATH:/usr/local/lib"
 export CPATH="$CUDA_ROOT/include:$CPATH"
 
 # This is the default install locatiion. Install `ca-certificates`
