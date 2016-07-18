@@ -80,3 +80,11 @@ let g:C_Ctrl_j = 'off'
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-f>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+
+" vimtex
+let g:vimtex_latexmk_build_dir="build"
+let g:vimtex_view_general_viewer = 'okular'
+let g:vimtex_view_general_options = '--unique @pdf\#src:@line@tex'
+let g:vimtex_view_general_options_latexmk = '--unique'
+let g:vimtex_latexmk_continuous=1
+let g:vimtex_quickfix_ignore_all_warnings=1
