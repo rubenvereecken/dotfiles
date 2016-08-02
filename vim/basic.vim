@@ -157,7 +157,12 @@ syntax enable
 
 if has("gui_running")
   set t_Co=16
-  set background=dark
+  let hour = strftime("%H")
+  if 7 <= hour && hour < 21
+    set background=light
+  else
+    set background=dark
+  endif
   colorscheme solarized
   set guioptions-=m  "remove menu bar
   set guioptions-=T  "remove toolbar
@@ -169,6 +174,7 @@ else
   " Fixes stuff on big laptop
   set t_Co=8
 endif
+
 
 " Just a nice font I found, used in the gui only
 " TODO automatically install this using dotfiles organizer
@@ -192,6 +198,7 @@ set ffs=unix,dos,mac
 set nobackup
 set nowb
 set noswapfile
+set backupcopy=yes
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -219,6 +226,13 @@ set ai "Auto indent
 " set cindent " Used to have smart indent, this is C-style indent
 set wrap "Wrap lines
 
+fun! <SID>StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfun
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
