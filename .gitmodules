@@ -73,3 +73,6 @@
 [submodule "vim/bundle/vimtex"]
 	path = vim/bundle/vimtex
 	url = https://github.com/lervag/vimtex.git
+[submodule "gnome-terminal/gnome-terminal-colors-solarized"]
+	path = gnome-terminal/gnome-terminal-colors-solarized
+	url = https://github.com/Anthony25/gnome-terminal-colors-solarized.git

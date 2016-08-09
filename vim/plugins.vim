@@ -89,3 +89,4 @@ let g:vimtex_view_general_options = '--unique @pdf\#src:@line@tex'
 let g:vimtex_view_general_options_latexmk = '--unique'
 let g:vimtex_latexmk_continuous=1
 let g:vimtex_quickfix_ignore_all_warnings=1
+let g:vimtex_fold_enabled=1
