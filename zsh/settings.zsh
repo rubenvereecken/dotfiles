@@ -22,5 +22,5 @@ export NVM_DIR="$HOME/.nvm"
 source $ZSH/oh-my-zsh.sh
 
 # Solarized dircolors
-solarized_dircolors="$HOME/.dotfiles/gnome-terminal/dircolors-solarized/"
+# solarized_dircolors="$HOME/.dotfiles/gnome-terminal/dircolors-solarized/"
 # [ -d $solarized_dircolors ] && eval $(dircolors $solarized_dircolors/dircolors.ansi-dark)
