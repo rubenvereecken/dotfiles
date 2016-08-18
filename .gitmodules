@@ -76,3 +76,9 @@
 [submodule "gnome-terminal/gnome-terminal-colors-solarized"]
 	path = gnome-terminal/gnome-terminal-colors-solarized
 	url = https://github.com/Anthony25/gnome-terminal-colors-solarized.git
+[submodule "themes/tomorrow-theme"]
+	path = themes/tomorrow-theme
+	url = https://github.com/chriskempson/tomorrow-theme.git
+[submodule "vim/bundle/gruvbox"]
+	path = vim/bundle/gruvbox
+	url = https://github.com/morhetz/gruvbox.git

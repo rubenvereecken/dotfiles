@@ -21,3 +21,5 @@
   - [echo "Install all tmux plugins by hitting `prefix + I` within tmux"]
   - [npm install]
   - [pip install -r requirements.txt --upgrade]
+  - [bash themes/tomorrow-theme/Gnome-Terminal/setup-theme.sh]
+  - [echo "Tomorrow Profile now available for Gnome Terminal"]

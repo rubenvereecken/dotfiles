@@ -163,7 +163,9 @@ if has("gui_running")
   else
     set background=dark
   endif
-  colorscheme solarized
+  " colorscheme solarized
+  " colorscheme Tomorrow-Night
+  colorscheme gruvbox
   set guioptions-=m  "remove menu bar
   set guioptions-=T  "remove toolbar
   set guioptions-=r  "remove right-hand scroll bar
@@ -314,7 +316,7 @@ nnoremap <silent> <leader>dp V:diffput<cr>
 nnoremap <silent> <leader>do V:diffget<cr>
 nnoremap <silent> <leader>dr :diffupdate<cr>
 nnoremap <silent> <Leader>dt :call DiffToggle()<CR>
-" nnoremap <silent> <leader>df :diffoff!<CR>
+nnoremap <silent> <leader>df :diffoff!<CR>
 " nnoremap <silent> <leader>dt :diffthis<CR>
 nmap <silent> <leader>du :wincmd w<cr>:normal u<cr>:wincmd w<cr>
 
