@@ -1,0 +1,10 @@
+- shell:
+  # Sets gnome-terminal as terminal emulator
+  - [gsettings set org.gnome.desktop.default-applications.terminal exec gnome-terminal]
+  - [gsettings set org.gnome.desktop.default-applications.terminal exec-arg '']
+  # I think this changes Caps to Ctrl
+  - [gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:modifier']"]
+  # Keyboard shortcuts
+  - [org.gnome.settings-daemon.plugins.media-keys www '<Super>c']
+  - [org.gnome.settings-daemon.plugins.media-keys email '<Super>m']
+  - [org.gnome.settings-daemon.plugins.media-keys home '<Super>e']
