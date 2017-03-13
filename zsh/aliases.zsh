@@ -9,6 +9,7 @@ alias vimf='vim $(fzf)'
 alias gvimf='gvim $(fzf)'
 alias gvimr='gvim --remote'
 alias mendeley='mendeleydesktop'
+alias rmrf='rm -rf'
 
 # Generate examples from a man page
 eg(){
