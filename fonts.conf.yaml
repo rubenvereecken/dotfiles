@@ -1,0 +1,7 @@
+- shell: [mkdir -p ~/.fonts]
+
+- link:
+  ~/.fonts/SourceCodePro: fonts/powerline/SourceCodePro
+
+- shell:
+  - [fc-cache]

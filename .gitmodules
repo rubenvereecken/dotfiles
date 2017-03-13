@@ -88,3 +88,12 @@
 [submodule "vim/bundle/vim-pug"]
 	path = vim/bundle/vim-pug
 	url = https://github.com/digitaltoad/vim-pug.git
+[submodule "fonts/fonts"]
+	path = fonts/fonts
+	url = https://github.com/powerline/fonts.git
+[submodule "fonts/--name"]
+	path = fonts/--name
+	url = https://github.com/powerline/fonts.git
+[submodule "fonts/powerline"]
+	path = fonts/powerline
+	url = https://github.com/powerline/fonts.git
