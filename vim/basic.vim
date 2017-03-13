@@ -158,11 +158,11 @@ syntax enable
 if has("gui_running")
   set t_Co=16
   let hour = strftime("%H")
-  if 7 <= hour && hour < 21
-    set background=light
-  else
+  " if 7 <= hour && hour < 21
+  "   set background=light
+  " else
     set background=dark
-  endif
+  " endif
   " colorscheme solarized
   " colorscheme Tomorrow-Night
   colorscheme gruvbox
