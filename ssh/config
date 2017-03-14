@@ -62,3 +62,8 @@ Host marston
      User rv1017
      ForwardAgent yes
      ProxyCommand ssh shell1 nc %h %p
+
+Host ladybug
+    Hostname ladybug.doc.ic.ac.uk
+    Port 22
+    User rv1017
