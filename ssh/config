@@ -50,6 +50,8 @@ Host *
     GSSAPIAuthentication yes
     GSSAPIDelegateCredentials yes
     UseRoaming no
+    # Always offer my main private key
+    IdentityFile ~/.ssh/precious_rsa
 
 Host shell1
      HostName shell1.doc.ic.ac.uk
