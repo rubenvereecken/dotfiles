@@ -58,12 +58,20 @@ Host shell1
      Port 22
      User rv1017
 
+# Host marston
+#      HostName marston.doc.ic.ac.uk
+#      Port 22
+#      User rv1017
+#      ForwardAgent yes
+#      ProxyCommand ssh shell1 nc %h %p
+
 Host marston
-     HostName marston.doc.ic.ac.uk
-     Port 22
-     User rv1017
-     ForwardAgent yes
-     ProxyCommand ssh shell1 nc %h %p
+  Hostname marston.doc.ic.ac.uk
+  Port 22
+  User ruben
+  ForwardAgent yes
+  ProxyCommand ssh shell1 nc %h %p
+
 
 Host ladybug
     Hostname ladybug.doc.ic.ac.uk

@@ -2,6 +2,11 @@
 
 My dotfiles; configurations and the like.
 
+## Fonts
+
+Fonts are separate for now.
+Install using `./install -c fonts.conf.yaml`
+
 ## Local files
 
 There are a couple of local files that will be loaded for changes that shouldn't be brought with me to other system.
