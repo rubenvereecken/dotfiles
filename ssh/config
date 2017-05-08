@@ -58,22 +58,38 @@ Host shell1
      Port 22
      User rv1017
 
-# Host marston
-#      HostName marston.doc.ic.ac.uk
-#      Port 22
-#      User rv1017
-#      ForwardAgent yes
-#      ProxyCommand ssh shell1 nc %h %p
-
 Host marston
   Hostname marston.doc.ic.ac.uk
   Port 22
   User ruben
   ForwardAgent yes
-  ProxyCommand ssh shell1 nc %h %p
-
+  ProxyCommand ssh -W %h:%p shell1
 
 Host ladybug
-    Hostname ladybug.doc.ic.ac.uk
-    Port 22
-    User rv1017
+  Hostname ladybug.doc.ic.ac.uk
+  Port 22
+  User rv1017
+
+# The next three hosts are used in case port 22 is blocked on the network
+# An extra AWS hop on an alternative port (443) serves as a relay
+# Using `marston-proxied` implicitly makes use of the two other proxies
+
+Host aws-alt
+  Hostname ec2-35-176-29-142.eu-west-2.compute.amazonaws.com
+  Port 443
+  User ubuntu
+  IdentityFile ~/.ssh/aws-master.pem
+
+Host shell1-proxied
+  HostName shell1.doc.ic.ac.uk
+  Port 22
+  User rv1017
+  ForwardAgent yes
+  ProxyCommand ssh -W %h:%p aws-alt
+
+Host marston-proxied
+  HostName marston.doc.ic.ac.uk
+  Port 22
+  User ruben
+  ForwardAgent yes
+  ProxyCommand ssh -W %h:%p shell1-proxied
