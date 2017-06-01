@@ -31,7 +31,7 @@ command! W w !sudo tee % > /dev/null
 nmap <C-g><C-g> :source ~/.vimrc<cr>:AirlineRefresh<cr>
 
 " Have a paste toggle that can easily switch to Paste mode for unmodified pastes
-set pastetoggle=<leader>pp
+set pastetoggle=<Leader>t
 noremap <Leader>p "+p
 noremap <Leader>P "+P
 nmap <Leader>yy "+yy

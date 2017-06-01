@@ -97,3 +97,7 @@ let g:gruvbox_contrast_dark="medium"
 " let g:gruvbox_improved_strings=1
 " let g:gruvbox_improved_warnings=1
 
+" Tagbar
+" Requires `ctags` to be installed
+nmap <F8> :TagbarToggle<CR>
+nmap <Leader>o :TagbarShowTag<CR>
