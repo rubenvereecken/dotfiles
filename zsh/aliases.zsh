@@ -10,6 +10,10 @@ alias gvimf='gvim $(fzf)'
 alias gvimr='gvim --remote'
 alias mendeley='mendeleydesktop'
 alias rmrf='rm -rf'
+# Stop vim from connecting to the X server because tmux doesn't have one
+# http://vimdoc.sourceforge.net/htmldoc/starting.html#-X
+alias vim="vim -X"
+alias df="df -h"
 
 # Generate examples from a man page
 eg(){

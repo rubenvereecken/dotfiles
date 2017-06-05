@@ -10,7 +10,10 @@ syntax on
 filetype plugin indent on
 
 " Filetype stuff that I can't put in folders
-au BufRead,BufNewFile *.md set filetype=markdown
+augroup filetypedetect
+  au BufRead,BufNewFile *.md setfiletype markdown
+  au BufRead,BufNewFile *.conf setfiletype conf
+augroup end
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -28,7 +31,7 @@ command! W w !sudo tee % > /dev/null
 nmap <C-g><C-g> :source ~/.vimrc<cr>:AirlineRefresh<cr>
 
 " Have a paste toggle that can easily switch to Paste mode for unmodified pastes
-set pastetoggle=<leader>pp
+set pastetoggle=<Leader>t
 noremap <Leader>p "+p
 noremap <Leader>P "+P
 nmap <Leader>yy "+yy
@@ -161,10 +164,9 @@ if has("gui_running")
   " if 7 <= hour && hour < 21
   "   set background=light
   " else
-    set background=dark
+  set background=dark
   " endif
   " colorscheme solarized
-  " colorscheme Tomorrow-Night
   colorscheme gruvbox
   set guioptions-=m  "remove menu bar
   set guioptions-=T  "remove toolbar
@@ -172,9 +174,10 @@ if has("gui_running")
   set guioptions-=L  "remove left-hand scroll bar
 else
   set background=dark
-  colorscheme solarized
+  let g:gruvbox_termcolors=16
+  set t_Co=256
+  colorscheme gruvbox
   " Fixes stuff on big laptop
-  set t_Co=8
 endif
 
 
