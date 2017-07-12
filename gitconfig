@@ -12,6 +12,7 @@
 	targz = ! "targz() { git archive --format tar.gz --prefix=\"${PWD##*/}/\" HEAD -o ${1}; }; targz"
 	zip = ! "zip() { git archive --format zip --prefix=\"${PWD##*/}/\" HEAD -o ${1}; }; zip"
 	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ; }; gi"
+	pff = pull --rebase
 
 
 [user]
