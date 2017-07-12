@@ -203,7 +203,7 @@ set ffs=unix,dos,mac
 set nobackup
 set nowb
 set noswapfile
-set backupcopy=yes
+set backupcopy=yes  " Make a copy of the file and overwrite old one
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

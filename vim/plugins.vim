@@ -81,6 +81,7 @@ let g:C_Ctrl_j = 'off'
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-f>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
 
 " vimtex
 let g:vimtex_latexmk_build_dir="build"
