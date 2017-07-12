@@ -1,0 +1,6 @@
+# The config file is in a profile directory and has a name like `ipython_config.py`
+
+# Find the profile directories
+ipython profile list
+
+# Startup files are under the profile's `startup` folder

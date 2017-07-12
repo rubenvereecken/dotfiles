@@ -1,0 +1,1 @@
+while inotifywait -e visualize.py; do python visualize.py; done
