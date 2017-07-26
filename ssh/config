@@ -57,6 +57,8 @@ Host shell1
      HostName shell1.doc.ic.ac.uk
      Port 22
      User rv1017
+     # Gets rid of annoying server banner
+     LogLevel error
 
 Host marston
   Hostname marston.doc.ic.ac.uk
