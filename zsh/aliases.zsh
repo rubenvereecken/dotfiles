@@ -14,6 +14,7 @@ alias rmrf='rm -rf'
 # http://vimdoc.sourceforge.net/htmldoc/starting.html#-X
 alias vim="vim -X"
 alias df="df -h"
+alias c="pygmentize -g" # Pygmentize and guess format
 
 # Generate examples from a man page
 eg(){
