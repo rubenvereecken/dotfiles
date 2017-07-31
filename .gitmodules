@@ -106,3 +106,6 @@
 [submodule "vim/bundle/ctrlp.vim"]
 	path = vim/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
+[submodule "fonts/consolas-font-for-powerline"]
+	path = fonts/consolas-font-for-powerline
+	url = https://github.com/runsisi/consolas-font-for-powerline.git
