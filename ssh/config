@@ -69,7 +69,12 @@ Host marston
 
 Host ladybug
   Hostname ladybug.doc.ic.ac.uk
-  Port 22
+Host flamingo
+  Hostname flamingo.doc.ic.ac.uk
+Host sicklebill
+  Hostname sicklebill.doc.ic.ac.uk
+
+Host ladybug flamingo sicklebill
   User rv1017
 
 # The next three hosts are used in case port 22 is blocked on the network
