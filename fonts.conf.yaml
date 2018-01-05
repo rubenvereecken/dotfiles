@@ -2,6 +2,7 @@
 
 - link:
     ~/.fonts/SourceCodePro: fonts/powerline/SourceCodePro/
+    ~/.fonts/Consolas: fonts/consolas-font-for-powerline/
 
 - shell:
   - [fc-cache]

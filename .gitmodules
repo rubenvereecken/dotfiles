@@ -73,9 +73,6 @@
 [submodule "vim/bundle/vimtex"]
 	path = vim/bundle/vimtex
 	url = https://github.com/lervag/vimtex.git
-[submodule "gnome-terminal/gnome-terminal-colors-solarized"]
-	path = gnome-terminal/gnome-terminal-colors-solarized
-	url = https://github.com/Anthony25/gnome-terminal-colors-solarized.git
 [submodule "themes/tomorrow-theme"]
 	path = themes/tomorrow-theme
 	url = https://github.com/chriskempson/tomorrow-theme.git
@@ -103,3 +100,12 @@
 [submodule "vim/bundle/tabular"]
 	path = vim/bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
+[submodule "vim/bundle/ctrlp.vim"]
+	path = vim/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git
+[submodule "fonts/consolas-font-for-powerline"]
+	path = fonts/consolas-font-for-powerline
+	url = https://github.com/runsisi/consolas-font-for-powerline.git
+[submodule "Gogh"]
+	path = Gogh
+	url = https://github.com/Mayccoll/Gogh.git

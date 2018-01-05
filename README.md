@@ -7,10 +7,20 @@ My dotfiles; configurations and the like.
 - `./install`
 - `curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash`
 
+## Gnome Terminal
+
+Use the `gogh.sh` script inside _Gogh_ to install any of a wide range of themes.
+
+Current favourite is _Gruvbox Dark_. Works very nicely with the Vim one.
+
 ## Fonts
 
 Fonts are separate for now.
 Install using `./install -c fonts.conf.yaml`
+
+Available:
+- Source Code Pro (for powerline)
+- Consolas (for powerline)
 
 ## Local files
 
