@@ -3,6 +3,7 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 export PATH="$HOME/.dotfiles/node_modules/.bin:$PATH"
 # Add local node binaries to path
 export PATH="$PATH:node_modules/.bin"
+export PATH="$PATH:$HOME/.zsh/scripts"
 
 # These are for working with CUDA
 export CUDA_ROOT="/usr/local/cuda-7.5"
