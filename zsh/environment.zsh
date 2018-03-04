@@ -5,12 +5,13 @@ export PATH="$HOME/.dotfiles/node_modules/.bin:$PATH"
 export PATH="$PATH:node_modules/.bin"
 
 # These are for working with CUDA
-export CUDA_ROOT="/usr/local/cuda-7.5"
-export CUDA_HOME="$CUDA_ROOT"
-export PATH="$CUDA_ROOT/bin:$PATH"
-export LD_LIBRARY_PATH="$CUDA_ROOT/lib64:$LD_LIBRARY_PATH:/usr/local/lib"
-export LIBRARY_PATH="$CUDA_ROOT/lib64:$LIBRARY_PATH:/usr/local/lib"
-export CPATH="$CUDA_ROOT/include:$CPATH"
+# TODO re-enable once I have a local cuda
+# export CUDA_ROOT="/usr/local/cuda-7.5"
+# export CUDA_HOME="$CUDA_ROOT"
+# export PATH="$CUDA_ROOT/bin:$PATH"
+# export LD_LIBRARY_PATH="$CUDA_ROOT/lib64:$LD_LIBRARY_PATH:/usr/local/lib"
+# export LIBRARY_PATH="$CUDA_ROOT/lib64:$LIBRARY_PATH:/usr/local/lib"
+# export CPATH="$CUDA_ROOT/include:$CPATH"
 
 # This is the default install locatiion. Install `ca-certificates`
 export CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
@@ -25,3 +26,5 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR='vim'
 fi
+
+export CUDA_DEVICE_ORDER=PCI_BUS_ID

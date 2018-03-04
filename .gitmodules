@@ -109,3 +109,6 @@
 [submodule "Gogh"]
 	path = Gogh
 	url = https://github.com/Mayccoll/Gogh.git
+[submodule "vim/bundle/python-mode"]
+	path = vim/bundle/python-mode
+	url = https://github.com/python-mode/python-mode.git
