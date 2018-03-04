@@ -3,6 +3,8 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 export PATH="$HOME/.dotfiles/node_modules/.bin:$PATH"
 # Add local node binaries to path
 export PATH="$PATH:node_modules/.bin"
+export PATH="$PATH:$HOME/.zsh/scripts"
+export PATH="/home/ruben/anaconda3/bin:$PATH"
 
 # These are for working with CUDA
 # TODO re-enable once I have a local cuda

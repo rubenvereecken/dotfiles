@@ -5,6 +5,9 @@ My dotfiles; configurations and the like.
 ## Installation
 
 - `./install`
+
+### PyEnv
+
 - `curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash`
 
 ## Gnome Terminal
@@ -24,17 +27,12 @@ Available:
 
 ## Local files
 
-There are a couple of local files that will be loaded for changes that shouldn't be brought with me to other system.
+There are a couple of local files that will be loaded for changes that shouldn't be brought with me to other systems.
 
 - `~/.zshrc_local_before`
 - `~/.zshrc_local_after`
 
 _TODO_: Find a good solution for secrets that I carry with me. Currently they're lumped in with local. An option is to have a separate, private dotfiles repo.
-
-## Additional Installations
-
-### PyEnv
-`curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash`
 
 ## Problems
 
