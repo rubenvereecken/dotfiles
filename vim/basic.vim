@@ -12,7 +12,8 @@ filetype plugin indent on
 " Filetype stuff that I can't put in folders
 augroup filetypedetect
   au BufRead,BufNewFile *.md setfiletype markdown
-  au BufRead,BufNewFile *.conf setfiletype conf
+  au BufRead,BufNewFile *.conf setfiletype config
+  au BufRead,BufNewFile *.cson setfiletype config
 augroup end
 
 " Set to auto read when a file is changed from the outside

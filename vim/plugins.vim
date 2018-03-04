@@ -16,9 +16,10 @@ set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_python_checkers = [] " Combines
 
 " Have some shortcuts for Syntastic
 nnoremap <leader>st :SyntasticToggleMode<CR>
@@ -30,6 +31,22 @@ nnoremap <leader>sr :SyntasticReset<CR>
 "       \ "mode": "active",
 "       \ "active_filetypes": ["go"],
 "       \ "passive_filetypes": ["html"]}
+
+" Pymode
+let g:pymode_virtualenv = 0
+let g:pymode_run = 0
+let g:pymode_doc = 0
+let g:pymode_doc_bind = 'K' " default K
+
+" The lint checkers and ignore option both seem not to work :(((
+let g:pymode_lint_on_write = 0
+" let g:pymode_lint_ignore = ["E501"] " default E501,W
+let g:pymode_lint_ignore = ["E221, E251"]
+let g:pymode_lint_checkers = ['pyflakes', 'pep8']
+let g:pymode_lint_options_mccabe = { 'complexity': 15 }
+
+let g:pymode_rope_regenerate_on_write = 0
+
 
 " DelimitMate auto-inserts brackets and puts cursor in the wanted position
 let delimitMate_expand_cr = 1
@@ -89,8 +106,9 @@ let g:vimtex_view_general_viewer = 'okular'
 let g:vimtex_view_general_options = '--unique @pdf\#src:@line@tex'
 let g:vimtex_view_general_options_latexmk = '--unique'
 let g:vimtex_latexmk_continuous=1
-let g:vimtex_quickfix_ignore_all_warnings=1
 let g:vimtex_fold_enabled=1
+let g:vimtex_quickfix_ignore_all_warnings=1
+let g:vimtex_quickfix_mode=2
 
 " gruvbox
 let g:gruvbox_contrast_light="hard"
