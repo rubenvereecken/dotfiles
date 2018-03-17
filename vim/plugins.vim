@@ -59,6 +59,9 @@ let delimitMate_jump_expansion = 1
 " NERDTree is a file explorer
 let NERDTreeWinPos = "right"
 
+" Don't show some files
+let NERDTreeIgnore = ['\.pyc$']
+
 nnoremap <Leader>nn :NERDTreeToggle<CR>
 nnoremap <Leader>nt :NERDTree
 nnoremap <Leader>nf :NERDTreeFind<CR>
