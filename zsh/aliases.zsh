@@ -12,7 +12,8 @@ alias mendeley='mendeleydesktop'
 alias rmrf='rm -rf'
 # Stop vim from connecting to the X server because tmux doesn't have one
 # http://vimdoc.sourceforge.net/htmldoc/starting.html#-X
-alias vim="vim -X"
+# vim -X # I stopped using this because it didn't matter? Also clientserver
+alias vim="vim --servername $(tmux_session_name)"
 alias df="df -h"
 alias du="du -h"
 alias c="pygmentize -g" # Pygmentize and guess format

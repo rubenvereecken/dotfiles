@@ -9,6 +9,9 @@ fi
 # Settings
 source ~/.zsh/settings.zsh
 
+# Load contained custom functions
+source ~/.zsh/functions.zsh
+
 # Set environment variables
 source ~/.zsh/environment.zsh
 
