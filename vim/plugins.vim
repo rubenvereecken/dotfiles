@@ -27,10 +27,10 @@ nnoremap <leader>ss :SyntasticCheck<CR>
 nnoremap <leader>sr :SyntasticReset<CR>
 
 " Syntastic can be annoying for some languages, so switch it to passive
-" let g:syntastic_mode_map = {
-"       \ "mode": "active",
-"       \ "active_filetypes": ["go"],
-"       \ "passive_filetypes": ["html"]}
+let g:syntastic_mode_map = {
+      \ "mode": "passive",
+      \ "active_filetypes": ["go"],
+      \ "passive_filetypes": ["html"]}
 
 " Pymode
 let g:pymode_virtualenv = 0
@@ -104,7 +104,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
 
 " vimtex
-let g:vimtex_latexmk_build_dir="build"
+let g:vimtex_compiler_latexmk = {
+    \ 'build_dir' : 'build',
+    \}
 let g:vimtex_view_general_viewer = 'okular'
 let g:vimtex_view_general_options = '--unique @pdf\#src:@line@tex'
 let g:vimtex_view_general_options_latexmk = '--unique'
@@ -112,6 +114,25 @@ let g:vimtex_latexmk_continuous=1
 let g:vimtex_fold_enabled=1
 let g:vimtex_quickfix_ignore_all_warnings=1
 let g:vimtex_quickfix_mode=2
+" Ignore certain warnings
+let g:vimtex_quickfix_latexlog = {
+      \ 'default' : 1,
+      \ 'general' : 1,
+      \ 'references' : 1,
+      \ 'overfull' : 1,
+      \ 'underfull' : 1,
+      \ 'font' : 1,
+      \ 'packages' : {
+      \   'default' : 1,
+      \   'natbib' : 1,
+      \   'biblatex' : 1,
+      \   'babel' : 1,
+      \   'hyperref' : 0,
+      \   'scrreprt' : 1,
+      \   'fixltx2e' : 1,
+      \   'titlesec' : 1,
+      \ },
+      \}
 
 " gruvbox
 let g:gruvbox_contrast_light="hard"
