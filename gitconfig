@@ -15,6 +15,7 @@
 	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ; }; gi"
 	pff = pull --rebase
 	dt = difftool
+	update-submodules = submodule update --recursive --remote --init
 
 
 [user]
