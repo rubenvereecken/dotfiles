@@ -1,4 +1,5 @@
 # Compilation from scratch
+# This gist is a template: https://gist.github.com/odiumediae/3b22d09b62e9acb7788baf6fdbb77cf8
 # - include dynamic Python 3 support provided by Anaconda
 # Note that `dynamic` is preferred over `yes` because conda is a little bitch
 ./configure  --with-features=huge \
