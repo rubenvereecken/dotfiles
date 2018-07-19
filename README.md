@@ -34,6 +34,9 @@ There are a couple of local files that will be loaded for changes that shouldn't
 
 _TODO_: Find a good solution for secrets that I carry with me. Currently they're lumped in with local. An option is to have a separate, private dotfiles repo.
 
+## Installing my favourite programs
+- `vim`: best compiled from scratch, see `cheat vim`
+
 ## Maintenance
 
 Since most everything is tracked as a git submodule,
@@ -50,3 +53,8 @@ It doesn't seem to hurt,
 but it may be necessary to split in two commands:
 ``git submodule update --recursive --init
 git submodule update --recursive --remote``
+
+## Problems
+
+All g.
+>>>>>>> 98c4ca4fc507f831b29cdee7697ded5b265be4cb

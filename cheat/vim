@@ -1,0 +1,16 @@
+# Compilation from scratch
+# This gist is a template: https://gist.github.com/odiumediae/3b22d09b62e9acb7788baf6fdbb77cf8
+# - include dynamic Python 3 support provided by Anaconda
+# Note that `dynamic` is preferred over `yes` because conda is a little bitch
+./configure  --with-features=huge \
+  --enable-pythoninterp=dynamic \
+  --enable-python3interp=dynamic \
+  --with-python-command=python \
+  --with-python3-command=python3 \
+  --with-compiledby="Ruben Vereecken" \
+  --with-python-config-dir=$HOME/anaconda3/envs/python27/lib/python2.7/config/ \
+  --with-python3-config-dir=$HOME/anaconda3/lib/python3.6/config-3.6m-x86_64-linux-gnu
+
+# This has vim load Python dynamically.
+# It needs access to the python library on startup:
+LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/anaconda3/lib"

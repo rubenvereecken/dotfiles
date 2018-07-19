@@ -29,4 +29,7 @@ else
   export EDITOR='vim'
 fi
 
+# Vim loads Python dynamically
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/anaconda3/lib"
+
 export CUDA_DEVICE_ORDER=PCI_BUS_ID
