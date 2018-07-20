@@ -109,3 +109,7 @@
 [submodule "vim/bundle/python-mode"]
 	path = vim/bundle/python-mode
 	url = https://github.com/python-mode/python-mode.git
+[submodule "vim/bundle/vim-colors-solarized"]
+	path = vim/bundle/vim-colors-solarized
+	url = https://github.com/rubenvereecken/vim-colors-solarized.git
+	branch = master
