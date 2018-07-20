@@ -15,6 +15,8 @@
 	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ; }; gi"
 	pff = pull --rebase
 	dt = difftool
+	serve = daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/
+	rm-deleted = !git rm $(git ls-files --deleted)
 
 
 [user]
