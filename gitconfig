@@ -17,6 +17,7 @@
 	dt = difftool
 	serve = daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/
 	rm-deleted = !git rm $(git ls-files --deleted)
+	update-submodules = submodule update --recursive --remote --init
 
 
 [user]

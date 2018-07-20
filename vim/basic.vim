@@ -4,17 +4,13 @@
 " Sets how many lines of history VIM has to remember
 set history=500
 
-syntax on
-
 " Enable filetype plugins and indentation
 filetype plugin indent on
+syntax on
 
-" Filetype stuff that I can't put in folders
-augroup filetypedetect
-  au BufRead,BufNewFile *.md setfiletype markdown
-  au BufRead,BufNewFile *.conf setfiletype config
-  au BufRead,BufNewFile *.cson setfiletype config
-augroup end
+set modeline
+
+so ~/.vim/filetype.vim
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -30,6 +26,9 @@ command! W w !sudo tee % > /dev/null
 
 " Refreshes the main .vimrc and Airline
 nmap <C-g><C-g> :source ~/.vimrc<cr>:AirlineRefresh<cr>
+
+" Refreshes current file
+nnoremap <Leader>e :e<CR>
 
 " Have a paste toggle that can easily switch to Paste mode for unmodified pastes
 set pastetoggle=<Leader>t

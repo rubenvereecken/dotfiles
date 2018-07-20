@@ -37,6 +37,24 @@ _TODO_: Find a good solution for secrets that I carry with me. Currently they're
 ## Installing my favourite programs
 - `vim`: best compiled from scratch, see `cheat vim`
 
+## Maintenance
+
+Since most everything is tracked as a git submodule,
+it can get tricky to update submodules consistently.
+Or even at all.
+Make sure your git version is new enough,
+preferably 2.x I think.
+A lot changed in 1.8.
+
+Update every submodule to the latest commit in the tracked branch:
+``git submodule update --recursive --remote --init``
+The `--init` is required when a new submodule is added.
+It doesn't seem to hurt,
+but it may be necessary to split in two commands:
+``git submodule update --recursive --init
+git submodule update --recursive --remote``
+
 ## Problems
 
 All g.
+>>>>>>> 98c4ca4fc507f831b29cdee7697ded5b265be4cb
