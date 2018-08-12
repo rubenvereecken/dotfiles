@@ -100,5 +100,3 @@ Host marston-proxied
   User ruben
   ForwardAgent yes
   ProxyCommand ssh -W %h:%p shell1-proxied
-
-Include local.config
