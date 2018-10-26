@@ -12,6 +12,8 @@
 
 # I assume US layout on my keyboards
 exec "setxkbmap -layout us"
+# Make Caps Lock into Ctrl
+exec "setxkbmap -option ctrl:nocaps"
 
 exec --no-startup-id "xrandr --output DP-1-2 -right-of DP-1-1 --auto"
 workspace 1 output DP-1-2
