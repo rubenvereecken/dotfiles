@@ -22,6 +22,8 @@ workspace 3 output DP-1-2
 workspace 4 output DP-1-1
 
 set $mod Mod4
+set $ctrl Control_L
+set $alt Alt_L
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -172,6 +174,19 @@ mode "launcher" {
 
 bindsym $mod+o mode "launcher"
 
+# Ctrl+Alt+L locks the screen
+# bindsym Control+Mod1+l exec "i3lock"
+bindsym Control+Mod1+l exec "/home/ruben/.i3/i3lock-fancy-multimonitor/lock -n -p"
+
+
+bindsym Control+Mod1+2 exec "shutter --select"
+bindsym Control+Mod1+3 exec "shutter --active"
+bindsym Control+Mod1+4 exec "shutter --window"
+
+# Find sink number with `pactl list sinks`
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 1 +1% #increase sound volume
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 1 -1% #decrease sound volume
+bindsym XF86AudioMute exec pactl set-sink-mute 1 toggle # mute sound
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -183,3 +198,5 @@ bar {
 # Apparently Spotify acts weirdly, and this line doesn't work, the next does
 assign [class="^Spotify$" instance="spotify"] → 4
 for_window [class="Spotify"] move to workspace 4
+
+for_window [title="^VGDL"] floating enable
