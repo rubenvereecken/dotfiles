@@ -1,0 +1,5 @@
+# Search hidden files
+ag --hidden
+
+# Search unrestricted in all files
+ag -u

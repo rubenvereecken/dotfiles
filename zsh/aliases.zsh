@@ -27,3 +27,9 @@ eg(){
           | sed --quiet --expression='/^E\(\x08.\)X\(\x08.\)\?A\(\x08.\)\?M\(\x08.\)\?P\(\x08.\)\?L\(\x08.\)\?E/{:a;p;n;/^[^ ]/q;ba}' \
           | ${MANPAGER:-${PAGER:-pager -s}}
 }
+
+# If vim has dynamic python3 support, load anaconda libraries on vim startup only
+# See `cheat vim`
+if vim --version | grep --quiet '\+python3/dyn'; then
+  alias vim="LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/anaconda3/lib vim"
+fi

@@ -16,6 +16,8 @@
 	pff = pull --rebase
 	dt = difftool
 	update-submodules = submodule update --recursive --remote --init
+	serve = daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/
+	rm-deleted = !git rm $(git ls-files --deleted)
 
 
 [user]

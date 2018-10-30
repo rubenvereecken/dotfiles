@@ -33,19 +33,27 @@ let g:syntastic_mode_map = {
       \ "passive_filetypes": ["html"]}
 
 " Pymode
+" let g:pymode_debug = 1
 let g:pymode_virtualenv = 0
 let g:pymode_run = 0
 let g:pymode_doc = 0
 let g:pymode_doc_bind = 'K' " default K
 
 " The lint checkers and ignore option both seem not to work :(((
+let g:pymode_python = 'python3'
 let g:pymode_lint_on_write = 0
 " let g:pymode_lint_ignore = ["E501"] " default E501,W
 let g:pymode_lint_ignore = ["E221, E251"]
 let g:pymode_lint_checkers = ['pyflakes', 'pep8']
 let g:pymode_lint_options_mccabe = { 'complexity': 15 }
 
-let g:pymode_rope_regenerate_on_write = 0
+" Decided I don't like rope so much for now
+let g:pymode_rope = 1
+" Auto-complete on <C-Space>
+let g:pymode_rope_completion = 1
+let g:pymode_rope_completion_on_dot = 1
+let g:pymode_rope_goto_definition_cmd = 'e' " or new, vnew
+" let g:pymode_rope_regenerate_on_write = 0
 
 
 " DelimitMate auto-inserts brackets and puts cursor in the wanted position
@@ -82,8 +90,9 @@ nnoremap <Leader>nf :NERDTreeFind<CR>
 
 " Simpylfold for Python (yes, spelled correctly)
 let g:SimpylFold_docstring_preview = 1
-autocmd BufWinEnter *.py setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr
-autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
+" https://github.com/tmhedberg/SimpylFold/issues/27
+" autocmd BufWinEnter *.py setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr
+" autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
 
 " Emmet for HTML and CSS
 let g:emmet_html5=1
