@@ -3,3 +3,14 @@ snippet p "Anonymous paragraph" b
 
 endsnippet
 
+snippet newsym "New glossaries-extra symbol" b
+\glsxtrnewsymbol
+  [description={${1:description}}]
+  {${2:label}}{\ensuremath{${3:math}}}
+endsnippet
+
+snippet def "Definition" b
+\begin{definition}[${1:name}]
+	${2:body}
+\end{definition}
+endsnippet
