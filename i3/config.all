@@ -8,6 +8,12 @@ exec "setxkbmap -layout us"
 # Make Caps Lock into Ctrl
 exec "setxkbmap -option ctrl:nocaps"
 
+# feh is responsible for the wallpaper
+exec --no-startup-id ~/.i3/fehbg
+
+# Gnome? Network Manager applet
+exec --no-startup-id nm-applet
+
 set $mod Mod4
 set $ctrl Control_L
 set $alt Alt_L
@@ -39,11 +45,9 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+# Fast alternative to i3-dmenu-desktop that can be found on apt-get
+bindsym $mod+d exec --no-startup-id j4-dmenu-desktop
 
 # change focus
 bindsym $mod+h focus left
@@ -164,7 +168,6 @@ bindsym $mod+o mode "launcher"
 # Ctrl+Alt+L locks the screen
 # bindsym Control+Mod1+l exec "i3lock"
 bindsym Control+Mod1+l exec "/home/ruben/.i3/i3lock-fancy-multimonitor/lock -n -p"
-
 
 bindsym Control+Mod1+2 exec "shutter --select"
 bindsym Control+Mod1+3 exec "shutter --active"
