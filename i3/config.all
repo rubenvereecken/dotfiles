@@ -187,5 +187,3 @@ assign [class="^Spotify$" instance="spotify"] → 4
 for_window [class="Spotify"] move to workspace 4
 
 for_window [title="^VGDL"] floating enable
-# i3 config for master-precious
-
