@@ -21,7 +21,7 @@ set $alt Alt_L
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # font pango:monospace 8
-font pango:Source Code Pro for Powerline Medium 10
+font pango:Source Code Pro for Powerline Medium 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -177,6 +177,19 @@ bindsym Control+Mod1+4 exec "shutter --window"
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 1 +1% #increase sound volume
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume 1 -1% #decrease sound volume
 bindsym XF86AudioMute exec pactl set-sink-mute 1 toggle # mute sound
+
+# Touchpad
+bindsym XF86TouchpadToggle exec ~/.zsh/scripts/toggle-touchpad.sh
+
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+
+# Relies on playerctl to relay to player
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
