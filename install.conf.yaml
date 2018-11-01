@@ -1,5 +1,8 @@
 - clean: ['~']
 
+- shell:
+  - [cd i3 && make clean config]
+
 - link:
     ~/.dotfiles: ''
     ~/.gitconfig: gitconfig

@@ -143,6 +143,9 @@ let g:vimtex_quickfix_latexlog = {
       \   'titlesec' : 1,
       \ },
       \}
+" Just plain vim but I would expect to see it here
+" No-fancy tex files will still get latex filetype
+let g:tex_flavor = "latex"
 
 " gruvbox
 let g:gruvbox_contrast_light="hard"
