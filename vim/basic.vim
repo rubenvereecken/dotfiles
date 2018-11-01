@@ -330,3 +330,8 @@ function! DiffToggle()
         diffthis
     endif
 :endfunction
+
+" For developing filetype plugins, syntax
+map <F9> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>,

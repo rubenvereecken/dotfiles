@@ -7,9 +7,13 @@ endif
 
 syntax case ignore
 
-syntax keyword crawlOption message_colour
+syn keyword crawlKeyword true false
 
 syn match crawlComment  "^#.*$"
+syn match crawlVimModeline "\v^\#[ !]?vim.*$"
+
+syntax keyword crawlOption message_colour
+
 syn match crawlOperator "\v\:\="
 syn match crawlOperator "\v\+\="
 syn match crawlOperator "\v\^\="
@@ -27,9 +31,11 @@ syn include @p6RegexBlock @p6Key syntax/perl6.vim
 " syn region crawlRegex start="\v\+\= " end="\v.$" keepend
 " syn region crawlRegex start="\v\+\= " end="\v.$" keepend contains=@p6RegexBlock
 
-hi def link crawlOption Keyword
 hi def link crawlComment Comment
+hi def link crawlVimModeline Include
 
+hi def link crawlKeyword Keyword
+hi def link crawlOption Keyword
 hi def link crawlOperator Operator
 hi def link crawlRegex Error
 
