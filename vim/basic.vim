@@ -312,6 +312,12 @@ endfunction
 nnoremap <silent> <Plug>LocationPrevious    :<C-u>exe 'call <SID>LocationPrevious()'<CR>
 nnoremap <silent> <Plug>LocationNext        :<C-u>exe 'call <SID>LocationNext()'<CR>
 
+
+" Useful when editing Vim syntax files
+
+nnoremap <F5> yi":let @/ = @"<CR>:set hls<CR>
+
+
 " Vim diff shortcuts and whatnot
 
 set diffopt=filler,vertical
