@@ -30,7 +30,7 @@ Host *
 #   BatchMode no
 #   CheckHostIP yes
 #   AddressFamily any
-  ConnectTimeout 2
+  # ConnectTimeout 2
 #   StrictHostKeyChecking ask
 #   IdentityFile ~/.ssh/identity
 #   IdentityFile ~/.ssh/id_rsa
@@ -101,4 +101,3 @@ Host marston-proxied
   ForwardAgent yes
   ProxyCommand ssh -W %h:%p shell1-proxied
 
-Include local.config
