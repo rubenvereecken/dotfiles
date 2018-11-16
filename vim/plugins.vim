@@ -116,9 +116,11 @@ let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
 let g:vimtex_compiler_latexmk = {
     \ 'build_dir' : 'build',
     \}
-let g:vimtex_view_general_viewer = 'okular'
-let g:vimtex_view_general_options = '--unique @pdf\#src:@line@tex'
-let g:vimtex_view_general_options_latexmk = '--unique'
+" let g:vimtex_view_general_viewer = 'okular'
+" let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
+" let g:vimtex_view_general_options_latexmk = '--unique'
+let g:vimtex_view_general_viewer = 'zathura'
+
 let g:vimtex_latexmk_continuous=1
 let g:vimtex_fold_enabled=1
 let g:vimtex_quickfix_ignore_all_warnings=1
@@ -142,6 +144,9 @@ let g:vimtex_quickfix_latexlog = {
       \   'titlesec' : 1,
       \ },
       \}
+" Just plain vim but I would expect to see it here
+" No-fancy tex files will still get latex filetype
+let g:tex_flavor = "latex"
 
 " gruvbox
 let g:gruvbox_contrast_light="hard"

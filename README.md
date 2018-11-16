@@ -16,6 +16,19 @@ Use the `gogh.sh` script inside _Gogh_ to install any of a wide range of themes.
 
 Current favourite is _Gruvbox Dark_. Works very nicely with the Vim one.
 
+## Window manager - i3
+
+Install the following through `apt-get`:
+- i3
+- i3status (status bar)
+- suckless-tools (dmenu, that's the launcher thingie)
+- i3lock (lockscreen)
+
+Since i3 only supports a single config file,
+a Makefile governs the combining of machine-specific
+config files based on their hostname.
+This is included in the install procedure.
+
 ## Fonts
 
 Fonts are separate for now.
@@ -57,4 +70,3 @@ git submodule update --recursive --remote``
 ## Problems
 
 All g.
->>>>>>> 98c4ca4fc507f831b29cdee7697ded5b265be4cb

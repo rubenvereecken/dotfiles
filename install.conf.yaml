@@ -1,5 +1,8 @@
 - clean: ['~']
 
+- shell:
+  - [cd i3 && make clean config]
+
 - link:
     ~/.dotfiles: ''
     ~/.gitconfig: gitconfig
@@ -15,6 +18,8 @@
     ~/.cheat: cheat/
     ~/.ssh/precious_rsa.pub: ssh/precious_rsa.pub
     ~/.ssh/config: ssh/config
+    ~/.i3: i3/
+    ~/.Xmodmap: Xmodmap
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
