@@ -1,0 +1,4 @@
+# AoE2 needs the following
+
+- Set to Win XP (forgot how, will not work 2019+)
+- vcrun2015, d3dx9_43 (install using winetricks)
