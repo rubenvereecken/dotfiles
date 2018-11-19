@@ -67,6 +67,14 @@ but it may be necessary to split in two commands:
 ``git submodule update --recursive --init
 git submodule update --recursive --remote``
 
+Some submodules have submodules themselves.
+A recursive update will update those too,
+I believe past what the submodule wants _its_ submodule to be.
+I still need to figure out a way for that not to happen.
+Right now, I ignore those extra changes
+by adding `ignore = dirty` in the offending
+entries in the `.gitmodules` file.
+
 ## Problems
 
 All g.
