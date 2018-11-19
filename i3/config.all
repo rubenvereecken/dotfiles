@@ -4,9 +4,9 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # I assume US layout on my keyboards
-exec "setxkbmap -layout us"
+exec --no-startup-id "setxkbmap -layout us"
 # Make Caps Lock into Ctrl
-exec "setxkbmap -option ctrl:nocaps"
+exec --no-startup-id "setxkbmap -option ctrl:nocaps"
 
 # feh is responsible for the wallpaper
 exec --no-startup-id ~/.i3/fehbg
