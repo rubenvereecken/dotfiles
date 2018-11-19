@@ -159,6 +159,7 @@ bindsym $mod+r mode "resize"
 mode "launcher" {
   bindsym c exec google-chrome
   bindsym s exec spotify
+  bindsym e exec nautilus --no-desktop
   bindsym Escape mode "default"
   bindsym Return mode "default"
 }

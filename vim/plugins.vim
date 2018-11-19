@@ -117,9 +117,11 @@ let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
 let g:vimtex_compiler_latexmk = {
     \ 'build_dir' : 'build',
     \}
-let g:vimtex_view_general_viewer = 'okular'
-let g:vimtex_view_general_options = '--unique @pdf\#src:@line@tex'
-let g:vimtex_view_general_options_latexmk = '--unique'
+" let g:vimtex_view_general_viewer = 'okular'
+" let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
+" let g:vimtex_view_general_options_latexmk = '--unique'
+let g:vimtex_view_general_viewer = 'zathura'
+
 let g:vimtex_latexmk_continuous=1
 let g:vimtex_fold_enabled=1
 let g:vimtex_quickfix_ignore_all_warnings=1
