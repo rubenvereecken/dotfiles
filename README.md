@@ -18,11 +18,15 @@ Current favourite is _Gruvbox Dark_. Works very nicely with the Vim one.
 
 ## Window manager - i3
 
+You are going to miss a lot of things Linux Mint provided.
+Is it worth the snobbism? Uncertain.
 Install the following through `apt-get`:
 - i3
 - i3status (status bar)
 - suckless-tools (dmenu, that's the launcher thingie)
 - i3lock (lockscreen)
+- scrot (seems to be necessary for i3lock, screen cap utility)
+- dunst (notification utility)
 
 Since i3 only supports a single config file,
 a Makefile governs the combining of machine-specific
