@@ -53,8 +53,8 @@ Host *
     # Always offer my main private key
     IdentityFile ~/.ssh/precious_rsa
 
-Host shell1
-     HostName shell1.doc.ic.ac.uk
+Host shell2
+     HostName shell2.doc.ic.ac.uk
      Port 22
      User rv1017
      # Gets rid of annoying server banner
@@ -65,7 +65,7 @@ Host marston
   Port 22
   User ruben
   ForwardAgent yes
-  ProxyCommand ssh -W %h:%p shell1
+  ProxyCommand ssh -W %h:%p shell2
 
 Host ladybug
   Hostname ladybug.doc.ic.ac.uk
@@ -100,3 +100,8 @@ Host marston-proxied
   User ruben
   ForwardAgent yes
   ProxyCommand ssh -W %h:%p shell1-proxied
+
+Host master-precious
+  HostName 192.168.0.22
+  Port 2202
+  User ruben

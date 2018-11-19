@@ -51,7 +51,7 @@ let g:pymode_lint_options_mccabe = { 'complexity': 15 }
 " Decided I don't like rope so much for now
 let g:pymode_rope = 0
 " Auto-complete on <C-Space>
-let g:pymode_rope_completion = 1
+let g:pymode_rope_completion = 0
 let g:pymode_rope_completion_on_dot = 0
 let g:pymode_rope_goto_definition_cmd = 'e' " or new, vnew
 " let g:pymode_rope_regenerate_on_write = 0
