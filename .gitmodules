@@ -113,6 +113,9 @@
 [submodule "vim/bundle/vim-colors-solarized"]
 	path = vim/bundle/vim-colors-solarized
 	url = https://github.com/rubenvereecken/vim-colors-solarized.git
+[submodule "vim/bundle/crawlrc.vim"]
+	path = vim/bundle/crawlrc.vim
+	url = https://github.com/rubenvereecken/crawlrc.vim.git
 	branch = master
 [submodule "vim/bundle/vim-hilinks"]
 	path = vim/bundle/vim-hilinks
