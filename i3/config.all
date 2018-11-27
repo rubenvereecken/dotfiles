@@ -79,6 +79,9 @@ bindsym $mod+c split h
 # split in vertical orientation
 bindsym $mod+v split v
 
+bindsym $mod+z split vertical, layout tabbed
+bindsym $mod+x layout tabbed
+
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
@@ -86,6 +89,17 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
+
+# This guy explains so well
+# https://faq.i3wm.org/question/5066/how-do-i-stack-two-selected-window-out-of-4-windows.1.html
+mode "reorganise" {
+    bindsym l split horizontal, layout tabbed, focus right, move left
+    bindsym h split horizontal, layout tabbed, focus left, move right
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "reorganise"
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -124,9 +138,9 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+Shift+c exec --no-startup-id "~/.i3/i3-reload.sh"
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+bindsym $mod+Shift+r exec --no-startup-id "~/.i3/i3-restart.sh"
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
@@ -154,7 +168,7 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "resize"
+bindsym $mod+p mode "resize"
 
 mode "launcher" {
   bindsym c exec google-chrome
