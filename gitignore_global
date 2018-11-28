@@ -1,5 +1,9 @@
+# Python
 *.pyc
 *egg-info
+.mypy_cache
+
+# Node.js
 node_modules
 bower_components
 
