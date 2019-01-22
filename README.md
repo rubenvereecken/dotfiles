@@ -10,6 +10,13 @@ My dotfiles; configurations and the like.
 
 - `curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash`
 
+### Ipython
+
+If `ipython` is installed,
+`ipython_config.py` will be linked into the default profile.
+It contains configuration such as autoreload
+and library imports.
+
 ## Gnome Terminal
 
 Use the `gogh.sh` script inside _Gogh_ to install any of a wide range of themes.
