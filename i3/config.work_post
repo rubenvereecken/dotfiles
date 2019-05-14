@@ -1,0 +1,10 @@
+# i3 config for marston
+
+# Two screens
+exec --no-startup-id "xrandr --output DP-1-2 --right-of DP-1-1 --auto"
+workspace 1 output DP-1-2
+workspace 2 output DP-1-1
+workspace 3 output DP-1-2
+workspace 4 output DP-1-1
+
+font pango:Source Code Pro for Powerline Medium 10
