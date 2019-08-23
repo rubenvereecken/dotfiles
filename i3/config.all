@@ -7,6 +7,8 @@
 exec --no-startup-id "setxkbmap -layout us"
 # Make Caps Lock into Ctrl
 exec --no-startup-id "setxkbmap -option ctrl:nocaps"
+# xset r rate delay [rate]
+exec --no-startup-id "xset r rate 200 25"
 
 # feh is responsible for the wallpaper
 exec --no-startup-id ~/.i3/fehbg
@@ -14,6 +16,10 @@ exec --no-startup-id ~/.i3/fehbg
 # Gnome? Network Manager applet
 exec --no-startup-id nm-applet
 
+# Mega
+exec --no-startup-id megasync
+
+# Mod1 is Alt, Mod4 is Super
 set $mod Mod4
 set $ctrl Control_L
 set $alt Alt_L
@@ -21,6 +27,8 @@ set $alt Alt_L
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # font pango:monospace 8
+# This font works nicely on my laptops, but too small on the HD screens?
+# It's probably some finnicky DPI setting somewhere
 font pango:Source Code Pro for Powerline Medium 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
