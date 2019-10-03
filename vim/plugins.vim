@@ -160,15 +160,18 @@ let g:gruvbox_contrast_dark="medium"
 nmap <F8> :TagbarToggle<CR>
 nmap <Leader>o :TagbarShowTag<CR>
 
+" I stopped using CtrlP in favour of fzf
 " CtrlP
-let g:ctrlp_map = '<C-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'ra'
+" let g:ctrlp_map = '<C-p>'
+" let g:ctrlp_cmd = 'CtrlP'
+" let g:ctrlp_working_path_mode = 'ra'
 
-if executable('ag')
-  " Use Ag over Grep
-  set grepprg=ag\ --nogroup\ --nocolor
+" if executable('ag')
+"   " Use Ag over Grep
+"   set grepprg=ag\ --nogroup\ --nocolor
 
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-endif
+"   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+"   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+" endif
+set rtp+=~/.dotfiles/fzf
+nnoremap <C-p> :Files<Cr>

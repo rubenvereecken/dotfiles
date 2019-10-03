@@ -31,3 +31,6 @@
   - [pip install -r requirements.txt --upgrade]
   - [bash themes/tomorrow-theme/Gnome-Terminal/setup-theme.sh]
   - [echo "Tomorrow Profile now available for Gnome Terminal"]
+  - [./fzf/install]
+  - [mkdir -p $HOME/.local/bin]
+  - [cd git-extras && git checkout $(git describe --tags $(git rev-list --tags --max-count=1)) && make install PREFIX=$HOME/.local]

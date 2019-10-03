@@ -27,10 +27,10 @@ source ~/.zsh/aliases.zsh
 # External plugins (initialized after)
 # source ~/.zsh/plugins_after.zsh
 
+# Fuzzy file finder, has its own generated init file
+source ~/.fzf.zsh
+
 # Allow local customizations in the ~/.zshrc_local_after file
 if [ -f ~/.zshrc_local_after ]; then
     source ~/.zshrc_local_after
 fi
-
-# TODO
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

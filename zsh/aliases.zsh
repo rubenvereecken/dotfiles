@@ -15,7 +15,7 @@ alias rmrf='rm -rf'
 # vim -X # I stopped using this because it didn't matter? Also clientserver
 # alias vim="vim --servername $(tmux_session_name)"
 # Uses a Python-generated timestamp for a servername, pretty proof
-alias vim="vim --servername $(timestamp)"
+# alias vim="vim --servername $(timestamp)"
 alias df="df -h"
 alias du="du -h"
 alias c="pygmentize -g" # Pygmentize and guess format

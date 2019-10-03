@@ -70,6 +70,8 @@ Make sure your git version is new enough,
 preferably 2.x I think.
 A lot changed in 1.8.
 
+### Updating submodules
+
 Update every submodule to the latest commit in the tracked branch:
 ``git submodule update --recursive --remote --init``
 The `--init` is required when a new submodule is added.
@@ -85,6 +87,12 @@ I still need to figure out a way for that not to happen.
 Right now, I ignore those extra changes
 by adding `ignore = dirty` in the offending
 entries in the `.gitmodules` file.
+
+### Removing submodules
+To remove a submodule (I think traces are still kept in history),
+use git-extras' `git delete-submodule`.
+If for some reason you can't use that, check out
+https://stackoverflow.com/questions/1260748/how-do-i-remove-a-submodule/21211232#21211232
 
 ## Problems
 

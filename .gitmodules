@@ -99,9 +99,6 @@
 [submodule "vim/bundle/tabular"]
 	path = vim/bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
-[submodule "vim/bundle/ctrlp.vim"]
-	path = vim/bundle/ctrlp.vim
-	url = https://github.com/kien/ctrlp.vim.git
 [submodule "fonts/consolas-font-for-powerline"]
 	path = fonts/consolas-font-for-powerline
 	url = https://github.com/runsisi/consolas-font-for-powerline.git
@@ -125,3 +122,9 @@
 [submodule "i3/i3lock-fancy-multimonitor"]
 	path = i3/i3lock-fancy-multimonitor
 	url = https://github.com/guimeira/i3lock-fancy-multimonitor.git
+[submodule "git-extras"]
+	path = git-extras
+	url = https://github.com/tj/git-extras.git
+[submodule "vim/bundle/fzf.vim"]
+	path = vim/bundle/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git

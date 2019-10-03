@@ -5,6 +5,7 @@ export PATH="$HOME/.dotfiles/node_modules/.bin:$PATH"
 export PATH="$PATH:node_modules/.bin"
 export PATH="$PATH:$HOME/.zsh/scripts"
 export PATH="/home/ruben/anaconda3/bin:$PATH"
+export PATH="$PATH:$HOME/.local/bin"
 
 # These are for working with CUDA
 # TODO re-enable once I have a local cuda

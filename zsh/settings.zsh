@@ -20,10 +20,13 @@ HIST_STAMPS="dd/mm/yyyy"
 
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # TODO add vimmode once I understand
-plugins=(git tmux)
+plugins=(git git-extras tmux)
 
 # Autocompletion files
 fpath=($HOME/.zsh/autocompletion $fpath)
+
+# git-extras auto-completion, relies on zsh's git
+source $HOME/.dotfiles/git-extras/etc/git-extras-completion.zsh
 
 # NVM
 load_nvm () {
