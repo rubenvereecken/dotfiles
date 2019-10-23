@@ -4,3 +4,8 @@ tmux/plugins/*
 
 *.pyc
 node_modules
+
+# ranger
+ranger/bookmarks
+ranger/history
+ranger/tagged
