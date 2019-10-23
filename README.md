@@ -70,6 +70,10 @@ Make sure your git version is new enough,
 preferably 2.x I think.
 A lot changed in 1.8.
 
+### Installing submodules
+``git submodule add -b master [URL]``
+will make sure that git always tracks master.
+
 ### Updating submodules
 
 Update every submodule to the latest commit in the tracked branch:
