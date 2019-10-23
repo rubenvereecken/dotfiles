@@ -1,7 +1,7 @@
 hostname := $(shell hostname)
 
 desktop_name := master-precious
-laptop_name := beefy-precious
+laptop_name := lord-precious
 work_name := marston
 
 config: config.all config.desktop config.laptop config.work
