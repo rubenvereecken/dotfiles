@@ -27,8 +27,11 @@
   - [git submodule update --init --recursive, Installing submodules]
   # - [mkdir -p ~/.z]
   - [echo "Install all tmux plugins by hitting `prefix + I` within tmux"]
-  - [npm install]
-  - [pip install -r requirements.txt --upgrade]
+  # No longer installing global Node packages like this
+  # - [npm install]
+  # No longer installing global Python packages like this
+  # If I still want any – could use pipx somehow
+  # - [pip install -r requirements.txt --upgrade]
   - [bash themes/tomorrow-theme/Gnome-Terminal/setup-theme.sh]
   - [echo "Tomorrow Profile now available for Gnome Terminal"]
   - [./fzf/install]

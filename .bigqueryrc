@@ -1,0 +1,5 @@
+# https://cloud.google.com/bigquery/docs/bq-command-line-tool#setting_default_values_for_command-line_flags
+
+[query]
+--use_legacy_sql=false
+--max_rows=100

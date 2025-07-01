@@ -21,7 +21,7 @@
 
 
 [user]
-	email = rubenvereecken@gmail.com
+	email = ruben@20tech.io
 	name = Ruben Vereecken
 
 [diff]
@@ -37,6 +37,7 @@
 [push]
 	default = simple
 	followTags = true
+	autoSetupRemote = true
 
 [pretty]
 	line = "%C(auto)%h%d %s %C(yellow)by %C(blue)%an %C(green)%ar"
@@ -58,3 +59,10 @@
 	path = ~/.gitconfig_local
 [pull]
 	rebase = true
+[http]
+	sslVerify = false
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

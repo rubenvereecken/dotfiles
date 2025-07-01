@@ -19,7 +19,7 @@ alias rmrf='rm -rf'
 alias df="df -h"
 alias du="du -h"
 alias c="pygmentize -g" # Pygmentize and guess format
-alias rsync="rsync -raz --no-o --no-g --info=progress2"
+alias rsync="rsync -raz --no-o --no-g --progress"
 
 # Generate examples from a man page
 eg(){
