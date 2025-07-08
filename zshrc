@@ -39,12 +39,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export REQUESTS_CA_BUNDLE="$HOME/.mac-ca-roots"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/ruben/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ruben/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/ruben/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ruben/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-
 export PATH="$PATH:/opt/bin"
 
 export NVM_DIR="$HOME/.nvm"
@@ -93,3 +87,9 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
 export PATH="/Users/ruben/.local/bin:$PATH"
 export PATH="/opt/homebrew/opt/mysql@8.0/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/opt/google-cloud-sdk/path.zsh.inc' ]; then . '/opt/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/opt/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/google-cloud-sdk/completion.zsh.inc'; fi
