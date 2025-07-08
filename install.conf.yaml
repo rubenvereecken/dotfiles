@@ -16,7 +16,6 @@
     ~/.oh-my-zsh: oh-my-zsh/
     ~/.zsh: zsh/
     ~/.zshrc: zshrc
-    ~/.fzf: fzf/
     ~/.cheat: cheat/
     ~/.ssh/precious_rsa.pub: ssh/precious_rsa.pub
     ~/.ssh/config: ssh/config
