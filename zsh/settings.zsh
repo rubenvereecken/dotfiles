@@ -4,16 +4,23 @@
 export ZSH="${HOME}/.oh-my-zsh"
 export ZSH_CUSTOM="$HOME/.zsh/custom"
 
-ZSH_THEME="my-gruvbox"
+if [[ -n $CURSOR_TRACE_ID ]]; then
+  ZSH_THEME="robbyrussell"  # Use a simpler theme in Cursor
+else
+  ZSH_THEME="powerlevel10k/powerlevel10k"
+fi
+
+# ZSH_THEME="gruvbox"
+# ZSH_THEME="my-gruvbox"
 # ZSH_THEME="mine"
 # ZSH_THEME="tomorrow"
 # ZSH_THEME="gruvbox-powerline"
 
-ZSH_POWERLINE_SINGLE_LINE=false
-ZSH_POWERLINE_SHOW_OS=false
-ZSH_POWERLINE_SHOW_TIME=false
-POWERLINE_RIGHT_B="none"
-POWERLINE_RIGHT_A="exit-status"
+# ZSH_POWERLINE_SINGLE_LINE=false
+# ZSH_POWERLINE_SHOW_OS=false
+# ZSH_POWERLINE_SHOW_TIME=false
+# POWERLINE_RIGHT_B="none"
+# POWERLINE_RIGHT_A="exit-status"
 
 HIST_STAMPS="dd/mm/yyyy"
 
@@ -21,12 +28,18 @@ HIST_STAMPS="dd/mm/yyyy"
 
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # TODO add vimmode once I understand
-plugins=(git git-extras tmux)
+plugins=(git git-extras)
 
-# plugins=(zsh-activate-py-environment)
+# Load zsh plugins installed via brew
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-alias gh=/opt/homebrew/bin/gh
-plugins=(zsh-github-copilot $plugins)
+# plugins=($plugins zsh-activate-py-environment)
+# plugins=($plugins tmux)
+
+# Note: CLI GitHub Copilot turned off for now in favour of using Cursor mostly
+# alias gh=/opt/homebrew/bin/gh
+# plugins=($plugins zsh-github-copilot)
 
 # Autocompletion files
 fpath=($HOME/.zsh/autocompletion $fpath)
