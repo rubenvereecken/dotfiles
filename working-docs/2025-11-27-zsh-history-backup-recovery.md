@@ -39,11 +39,25 @@ wc -l ~/.zsh_history  # Should show ~34K lines
 
 ## Prevention
 
-Daily backup system (see [zsh-history-setup.md](2025-07-20-zsh-history-setup.md)) saved the day. Consider adding early warning:
+### File Locking Protection (IMPLEMENTED ✅)
+Added `HIST_FCNTL_LOCK` to prevent concurrent write corruption:
+```bash
+setopt HIST_FCNTL_LOCK  # Use fcntl() for file locking during history writes
+```
+**Status**: ✅ Option recognized by zsh 5.9  
+**Result**: Should prevent future macOS upgrade disasters by properly locking the history file during writes.
+
+### Early Warning System (IMPLEMENTED)
+Daily backup system (see [zsh-history-setup.md](2025-07-20-zsh-history-setup.md)) saved the day. Added early warning:
 
 ```bash
-# Add to .zshrc for suspicious truncation alerts
+# Alert for suspicious truncation 
 if [[ $(wc -l < ~/.zsh_history) -lt 10000 ]]; then
     echo "⚠️  Warning: zsh history suspiciously short ($(wc -l < ~/.zsh_history) lines)"
 fi
 ```
+
+### Future Considerations
+- **Enhanced backup frequency** during system update periods
+- **Pre-shutdown hooks** to backup history before macOS maintenance
+- **History file integrity monitoring** for proactive detection
