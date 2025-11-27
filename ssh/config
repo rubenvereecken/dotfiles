@@ -160,11 +160,11 @@ Host instance-data.us-west1-a.vitrifier
     IdentitiesOnly=yes
     CheckHostIP=no
 
-Host instance-data3.us-west1-a.vitrifier
-    HostName 34.169.160.123
+Host instance-data4.us-central1-a.vitrifier
+    HostName 34.56.169.168
     IdentityFile /Users/ruben/.ssh/google_compute_engine
     UserKnownHostsFile=/Users/ruben/.ssh/google_compute_known_hosts
-    HostKeyAlias=compute.3274433870733345607
+    HostKeyAlias=compute.3213310477392374557
     IdentitiesOnly=yes
     CheckHostIP=no
 
@@ -173,6 +173,22 @@ Host minecraft-instance.europe-west2-b.summitsift
     IdentityFile /Users/ruben/.ssh/google_compute_engine
     UserKnownHostsFile=/Users/ruben/.ssh/google_compute_known_hosts
     HostKeyAlias=compute.8967447827951334493
+    IdentitiesOnly=yes
+    CheckHostIP=no
+
+Host instance-data4.us-west1-a.vitrifier
+    HostName 34.82.86.94
+    IdentityFile /Users/ruben/.ssh/google_compute_engine
+    UserKnownHostsFile=/Users/ruben/.ssh/google_compute_known_hosts
+    HostKeyAlias=compute.1553893946405208628
+    IdentitiesOnly=yes
+    CheckHostIP=no
+
+Host instance-data3.us-west1-a.vitrifier
+    HostName 34.169.160.123
+    IdentityFile /Users/ruben/.ssh/google_compute_engine
+    UserKnownHostsFile=/Users/ruben/.ssh/google_compute_known_hosts
+    HostKeyAlias=compute.3274433870733345607
     IdentitiesOnly=yes
     CheckHostIP=no
 

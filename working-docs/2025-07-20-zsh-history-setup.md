@@ -7,7 +7,7 @@
 - **HISTSIZE**: 10,000,000 (10M entries in memory)
 - **SAVEHIST**: 10,000,000 (10M entries saved to disk)
 - **Location**: `~/.zsh_history`
-- **Current entries**: ~26K lines (Nov 2024 → present)
+- **Current entries**: ~34K lines (Nov 2024 → Nov 16, 2025) - restored from backup
 
 ## History Options Active
 

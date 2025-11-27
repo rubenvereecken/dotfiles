@@ -9,3 +9,9 @@ timestamp () {
 update-expired-aptkeys () {
   for K in $(apt-key list | grep expired | cut -d'/' -f2 | cut -d' ' -f1); do sudo apt-key adv --recv-keys --keyserver keys.gnupg.net $K; done
 }
+
+today () {
+  date "+%Y-%m-%d"
+}
+
+export TODAY=$(date "+%Y-%m-%d")

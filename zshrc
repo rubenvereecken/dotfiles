@@ -107,3 +107,17 @@ export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 if [[ $ZSH_THEME == *"powerlevel10k"* ]]; then
   [[ ! -f ~/.zsh/p10k.zsh ]] || source ~/.zsh/p10k.zsh
 fi
+
+# Azure cli
+autoload bashcompinit && bashcompinit
+source $(brew --prefix)/etc/bash_completion.d/az
+export PYTHONUSERLOGGING="DEBUG"
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/ruben/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

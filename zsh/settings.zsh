@@ -87,6 +87,11 @@ unsetopt HIST_REDUCE_BLANKS      # Remove superfluous blanks before recording en
 # setopt HIST_VERIFY             # Don't execute immediately upon history expansion.
 # setopt HIST_BEEP               # Beep when accessing nonexistent history.
 
+# History health check - warn if suspiciously truncated
+if [[ $(wc -l < ~/.zsh_history) -lt 10000 ]]; then
+    echo "⚠️  Warning: zsh history suspiciously short ($(wc -l < ~/.zsh_history) lines)"
+fi
+
 # Solarized dircolors
 # solarized_dircolors="$HOME/.dotfiles/gnome-terminal/dircolors-solarized/"
 # [ -d $solarized_dircolors ] && eval $(dircolors $solarized_dircolors/dircolors.ansi-dark)
@@ -94,3 +99,7 @@ unsetopt HIST_REDUCE_BLANKS      # Remove superfluous blanks before recording en
 # zsh-github-copilot https://github.com/loiccoyle/zsh-github-copilot
 bindkey '»' zsh_gh_copilot_explain # bind Option+shift+\ to explain
 bindkey '«' zsh_gh_copilot_suggest # bind Option+\ to suggest
+
+# option + arrows because I couldn't get this to work otherwise in iterm2
+bindkey "^[[1;3D" backward-word
+bindkey "^[[1;3C" forward-word

@@ -34,3 +34,5 @@ export CUDA_DEVICE_ORDER=PCI_BUS_ID
 
 # I'm editing the default ranger rc so no need to also load the default one
 export RANGER_LOAD_DEFAULT_RC=FALSE
+
+export ANDROID_NDK_ROOT=~/Android/ndk/25.2.9519653
